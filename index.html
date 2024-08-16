@@ -1,61 +1,69 @@
 <!DOCTYPE html>
-
 <html>
 
-    <head>
+<head>
+    <link rel="stylesheet" href="library.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Library World</title>
+</head>
 
-        <link rel="stylesheet" href="library.css">
-        <link rel="icon" type="image/x-icon" href="icon.png">
+<body>
 
-        <title>Library World</title>
-        
-    </head>
+    <header>
+        <div class="navigation">
+            <p class="title">Library World</p>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Books</a>
+                    <ul class="dropdown">
+                        <li><a href="fiction.html">Fiction</a></li>
+                        <li><a href="nonfiction.html">Non-Fiction</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Registration</a>
+                    <ul class="dropdown">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-    <body>
+    <main class="mainbody">
+        <h1>Welcome</h1>
+        <br>
+        <p class="content">Explore and find all your favourites</p>
 
-        <header>
+        <section class="search-section">
+            <input type="text" placeholder="Search books, authors, etc...">
+            <button>Search</button>
+        </section>
 
-            <div class="navigation">
-                <p class="title">Library World</p>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Books</a></li>
-                </ul>
-            </div>
+        <section class="quotes">
+            <h2>Quotes from Authors</h2>
+            <blockquote>
+                "Our minds sometimes see what our hearts wish were true.." - Dan Brown
+            </blockquote>
+            <blockquote>
+                "You can't possibly do anything if you think you can't. But you can do impossible things sometimes if you think you can." - Enid Blyton
+            </blockquote>
+            <blockquote>
+                "A little nonsense now and then, is relished by the wisest men." - Roald Dahl
+            </blockquote>
+        </section>
+    </main>
 
-        </header>
+    <footer>
+        <p>Contact Us: 4444455555 | libraryworld@gmail.com</p>
+    </footer>
 
-        <main class="mainbody">
+</body>
 
-            <h1>Welcome</h1>
-
-            <br>
-
-            <p class="content">Explore and find all your favourites</p>
-
-            <section class="search-section">
-                <input type="text" placeholder="Search books, authors, etc...">
-                <button>Search</button>
-            </section>
-            <section class="quotes">
-                <h2>Quotes from Authors</h2>
-                <blockquote>
-                    "Our minds sometimes see what our hearts wish were true.." - Dan Brown
-                </blockquote>
-                <blockquote>
-                    "You can't possibly do anything if you think you can't. But you can do impossible things sometimes if you think you can." - Enid Blyton
-                </blockquote>
-                <blockquote>
-                    "A little nonsense now and then, is relished by the wisest men." - Roald Dahl
-                </blockquote>
-            </section>
-
-        </main>
-
-        <footer>
-            <p>Contact Us: 4444455555 | libraryworld@gmail.com</p>
-        </footer>
-
-    </body>
 </html>
