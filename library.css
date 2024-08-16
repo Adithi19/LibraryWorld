@@ -23,31 +23,67 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .title {
     display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 
+/* Navigation and Dropdown Menu */
 ul {
     list-style: none;
     display: flex;
-    gap: 100px;
+    gap: 30px; /* Reduced gap between top-level items */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 2;
+    position: relative;
+}
+
+li {
+    position: relative;
 }
 
 li a {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    padding: 10px;
+    padding: 5px 10px; /* Reduced padding inside links */
 }
 
 a:hover {
     background-color: #333;
-    border-style: unset;
-    padding: 10px;
 }
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 5px 0; /* Reduced padding on dropdown */
+    border-radius: 5px;
+    z-index: 1;
+    flex-direction: column;
+    width: max-content;
+}
+
+li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown li {
+    margin: 0; /* Removed margin between dropdown items */
+}
+
+.dropdown li a {
+    padding: 5px 10px; /* Smaller padding for dropdown items */
+}
+
 
 .mainbody {
     flex: 1;
@@ -113,3 +149,159 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+@media (max-width: 768px) {
+    ul {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .title {
+        justify-content: center;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+}
+
+.book-list, .team-list, .location-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.book-list li, .team-list li, .location-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-list li:last-child, .team-list li:last-child, .location-list li:last-child {
+    border-bottom: none;
+}
+
+.book-item {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.book-item img {
+    width: 200px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    margin-bottom: 1rem;
+}
+
+
+.book-item p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.team-member img {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.locations-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.location {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #f4f4f4; /* Light background for contrast */
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px; /* Fixed width for consistency */
+}
+
+.location p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+/* Container for form pages like login and sign up */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto; /* Center the form */
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+    width: 100%; /* Full width input fields */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    width: 100%; /* Full width button */
+    padding: 0.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #333;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1rem;
+        max-width: 90%; /* Allow the form to be more narrow on small screens */
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="password"],
+    .form-container input[type="email"],
+    .form-container button {
+        font-size: 0.9rem;
+    }
+}
+
